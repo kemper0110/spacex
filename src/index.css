@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.button-border {
+    box-sizing: border-box;
+    --light-blue: #1264ac;
+    --dark-blue: #16151d;
+    border: 2px solid transparent;
+    border-image: linear-gradient(-10deg, var(--dark-blue), var(--light-blue), var(--dark-blue)) 1;
+    position: relative;
+}
+
+.button-border:after, .button-border:before {
+    --shift: -1.5px;
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 7px;
+}
+
+.button-border:before {
+    left: var(--shift);
+    bottom: var(--shift);
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.button-border:after {
+    top: var(--shift);
+    right: var(--shift);
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+}
+
+.benefit-border {
+    border: 1px solid transparent;
+    border-left: transparent;
+    border-top: transparent;
+}
+
+.benefit-border-hover {
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    /*border-right: transparent;*/
+    /*border-bottom: transparent;*/
+    /*border-left: transparent;*/
+    /*border-top: transparent;*/
+    border-image: linear-gradient(135deg, transparent 50%, lightgray) 1;
+}
