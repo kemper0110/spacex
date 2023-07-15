@@ -45,7 +45,7 @@ const MobileNavigation = () => {
             </button>
             {
                 open ? (
-                    <div className={'fixed inset-0 min-h-0 bg-slate-500 z-50'}>
+                    <div className={'fixed inset-0 min-h-0 bg-gray-900 z-50'}>
                         <button className={'absolute right-0 top-8'} onClick={() => setOpen(false)}>
                             <img src={cross} alt={'close menu'} className={'w-[40px] h-[40px]'}/>
                         </button>
