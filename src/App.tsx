@@ -26,7 +26,7 @@ function App() {
                     </div>
                 </div>
             </div>
-            <div className={'min-h-screen w-full bg-black'}></div>
+            {/*<div className={'min-h-screen w-full bg-black'}></div>*/}
         </>
     )
 }

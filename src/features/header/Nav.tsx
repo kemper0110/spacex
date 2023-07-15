@@ -5,7 +5,7 @@ import {useState} from "react";
 
 const Item = ({title}: { title: string }) => (
     <li className={'hover:text-slate-400 decoration-slate-500 decoration-1 underline-offset-8 hover:underline transition-colors'}>
-        <a href={`/${title}`}>
+        <a href={`/#${title}`}>
             {title}
         </a>
     </li>
