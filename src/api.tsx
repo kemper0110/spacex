@@ -1,5 +1,8 @@
 import {useQuery} from "@tanstack/react-query";
-import {Benefit, Code} from "./features/section/benefit.ts";
+import {Benefit, Code} from "./features/content/benefit.ts";
+
+const baseURL = 'https://spacex-django-react.vercel.app'
+
 
 type Menu = {
     id: number
@@ -9,7 +12,7 @@ export const useMenu = () => (
     useQuery({
         queryKey: ["menu"],
         queryFn: async () => {
-            const response = await fetch('http://127.0.0.1:8000/menu/', {
+            const response = await fetch(baseURL + '/menu/', {
                 headers: {'Accept': 'application/json'}
             })
             if (!response.ok) throw new Error(response.statusText)
@@ -30,7 +33,7 @@ export const useBenefits = () => (
     useQuery({
         queryKey: ["benefits"],
         queryFn: async () => {
-            const response = await fetch('http://127.0.0.1:8000/benefits/', {
+            const response = await fetch(baseURL + '/benefits/', {
                 headers: {'Accept': 'application/json'}
             })
             if (!response.ok) throw new Error(response.statusText)
