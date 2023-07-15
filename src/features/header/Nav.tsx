@@ -12,7 +12,7 @@ const Item = ({title}: { title: string }) => (
 )
 export const Nav = () => {
     return (
-        <nav>
+        <nav className={'shrink-0'}>
             <PcNavigation/>
             <MobileNavigation/>
         </nav>

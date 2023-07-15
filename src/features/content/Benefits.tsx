@@ -8,7 +8,7 @@ export const Benefits = () => {
     console.log(data)
     return (
         <div className={'min-w-[300px] grid grid-cols-[1fr_1fr] gap-5 ' +
-            'text-transparent bg-gradient-to-b lg:bg-gradient-to-r from-white from-40% to-gray-600 bg-clip-text'}>
+            'text-transparent bg-gradient-to-b md:bg-gradient-to-r from-white from-40% to-gray-600 bg-clip-text'}>
             {
                 data?.map(benefit => <BenefitView key={benefit.id} benefit={benefit}/>)
             }
